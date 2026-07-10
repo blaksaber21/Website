@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owenpinard.com</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+
+<meta property="og:title" content="owen.com">
+<meta property="og:description" content="Owen's website and blog">
+<meta property="og:image" content="embed.png">
+<meta property="og:url" content="https://owen.com">
+<meta property="og:type" content="website">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="owen.com">
+<meta name="twitter:description" content="Owen's website and blog">
+<meta name="twitter:image" content="embed.png">
+
+<link rel="stylesheet" href="styles.css">
+
+
+</head>
+<body>
+
+<nav id="navbar">
+    <a href="index.html" class="nav-brand">OwenPinard.com</a>
+
+    <ul class="nav-links">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+        <li><a href="projects.html" class="nav-link">Projects</a></li>
+        <li><a href="contact.html" class="nav-link">Contact Me</a></li>
+    </ul>
+
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
+
+
+<main class="hero-main">
+    <div class="hero-center">
+
+        <div class="avatar-ring">
+           <img src="images/OwenUgly1.png" alt="Owen" class="avatar-img">
+                 
+            <div class="avatar-fallback">O</div>
+        </div>
+
+        <div class="hero-text">
+            <h1 class="hero-name">Owen</h1>
+
+            <p class="hero-tagline">
+                Hobby Programmer &amp; Security Researcher
+        
+            <div class="hero-stack">
+                <span class="stack-label">currently working with</span>
+
+                <div class="stack-tags">
+                    <a href="https://www.php.net/" class="tag" target="_blank" rel="noopener noreferrer">PHP</a>
+                    <a href="https://www.java.com/" class="tag" target="_blank" rel="noopener noreferrer">Java</a>
+                    <a href="https://www.c-language.org/" class="tag" target="_blank" rel="noopener noreferrer">C</a>
+                    <a href="https://python.org" class="tag" target="_blank" rel="noopener noreferrer">Python</a>
+                    <a href="https://www.torproject.org/download/tor/" class="tag" target="_blank" rel="noopener noreferrer">Tor</a>
+                </div>
+            </div>
+
+            <div class="social-links">
+                <a href="https://github.com/WhatisaOwen" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                    </svg>
+                </a>
+
+                <a href="pgp.html" class="social-link" aria-label="PGP Key">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+                        <path d="M12.65 10C11.83 7.67 9.61 6 7 6c-3.31 0-6 2.69-6 6s2.69 6 6 6c2.61 0 4.83-1.67 5.65-4H17v4h4v-4h2v-4H12.65zM7 14c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="recent-posts-strip">
+        <span class="strip-label">Recent Posts</span>
+        <div class="strip-posts" id="recentPosts"></div>
+        <a href="blog.html" class="strip-more">View All </a>
+    </div>
+</main>
+
+<footer>
+    <p class="footer-text">
+        <span class="mono">Owenpinard.com</span>
+        <span>Made by Owen</span>
+           <span> zero "ai" used confirmed by Contrary-Artificial</span>
+
+        <span class="footer-right mono">
+            © 2026 mail ~ Owen@Pinard.net
+        </span>
+    </p>
+</footer>
+
+<script src="blog-data.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

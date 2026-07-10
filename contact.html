@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — OwenPinard.com</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <meta property="og:title" content="OwenPinard.com">
+    <meta property="og:description" content="Owen Pinard's website and blog">
+    <meta property="og:image" content="embed.png">
+    <meta property="og:url" content="https://owenpinard.com">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="OwenPinard.com">
+    <meta name="twitter:description" content="Owen Pinard's website and blog">
+    <meta name="twitter:image" content="embed.png">
+
+    <link rel="stylesheet" href="styles.css">
+<script src="script.js"></script>    
+</head>
+
+<body>
+    <nav id="navbar">
+        <a href="index.html" class="nav-brand">OwenPinard.com</a>
+
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="blog.html" class="nav-link">Blog</a></li>
+            <li><a href="projects.html" class="nav-link">Projects</a></li>
+            <li><a href="contact.html" class="nav-link active">Contact Me</a></li>
+        </ul>
+        
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <main class="page-main contact-page">
+        <div class="page-header">
+            <h1 class="page-title">Contact Me</h1>
+            <p class="page-desc">
+                Last Update 6/29/2026..
+            </p>
+        </div>
+
+        <div class="contact-layout">
+            <div class="contact-info">
+
+                <div class="contact-block">
+                    <h2 class="contact-section-title">
+                        Ways to reach me
+                    </h2>
+                    <div class="contact-methods">
+                        <a href=""
+                           class="contact-method">
+                            <span class="mono contact-method-label">email</span>
+                            <span class="contact-method-value">
+                                <span class="__cf_email__"
+                                      data-cfemail="5b2f32373e221b2f3237373e2275373437">
+                                    Owen@Pinard.net
+                                </span>
+                            </span>
+                        </a>
+
+                        <a href="https://github.com/WhatisaOwen"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="contact-method">
+                            <span class="mono contact-method-label">github</span>
+                            <span class="contact-method-value">
+                                github.com/WhatisaOwen
+                            </span>
+                        </a>
+
+                        
+                        <a href="pgp.html"
+                           class="contact-method">
+                            <span class="mono contact-method-label">pgp</span>
+                            <span class="contact-method-value">
+                                 [Public key]
+                            </span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div class="contact-block">
+                    <h2 class="contact-section-title">
+                        what I'm open to
+                    </h2>
+
+                    <ul class="open-to-list">
+                        <li>collaboration on a project</li>
+                        <li>personal inquiries </li>
+                        <li>just saying hi</li>
+                    </ul>
+                </div>
+
+                <div class="contact-block">
+                </div>
+            </div>
+
+<div class="contact-form-wrapper"> 
+    <form class="contact-form" id="contactForm" novalidate>
+
+        <div class="form-row">
+            <label class="form-label" for="name">
+                <span class="mono">name</span>
+            </label>
+
+            <input
+                type="text"
+                id="name"
+                name="name"
+                class="form-input"
+                placeholder="your name"
+                autocomplete="name">
+        </div>
+
+        <div class="form-row">
+            <label class="form-label" for="message">
+                <span class="mono">message</span>
+            </label>
+
+    <textarea
+        id="message"
+        name="message"
+        class="form-input form-textarea"
+        placeholder="say something..."
+        rows="6"></textarea>
+</div>
+
+<button type="submit" class="form-submit">
+    send message
+</button>
+
+<div class="form-status" id="formStatus"></div>
+
+</form>
+</div>
