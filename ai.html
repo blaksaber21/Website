@@ -56,7 +56,8 @@
     <h1>Private AI</h1>
 
     <p class="ai-subtitle">
-        Messing around with mixing AI models. Feel free to use it. Keep in mind that the first prompt will always take longer sorry about that.
+        Messing around with mixing AI models. Feel free to use it.<br>
+        Currently running dolphin3 & GwenLLM 
     </p>
 
     <textarea
@@ -71,7 +72,7 @@
     </div>
 <div class="ai-notes">
     <p>
-        Around 10–15 seconds for prompts to generate.
+        Around 10–25 seconds for prompts to generate.
     </p>
 
     <p>
@@ -81,8 +82,8 @@
 
     <p>
         If you have any modifications you'd like me to add, send me a
-        message. I'm currently working on improving prompt handling
-        and generation speed.
+        message. I encourage everyone to run their own local LLM especially if you're interested in Ai.
+        Ollama is an amazing tool, and I can't recommend it enough.
     </p>
 
     <p>
@@ -112,19 +113,15 @@
 </script>
 <script>
 async function sendPrompt() {
-
+// owen change nano models I keep forgetting to set 24hr 
     const button = document.getElementById("send-btn");
     const responseBox = document.getElementById("response");
     const prompt = document.getElementById("prompt").value.trim();
-
     if (!prompt) return;
-
     button.disabled = true;
     button.textContent = "Thinking...";
     responseBox.textContent = "Generating response...";
-
     try {
-
         const res = await fetch("https://api.owenpinard.com/chat.php", {
             method: "POST",
             headers: {
@@ -134,17 +131,12 @@ async function sendPrompt() {
                 prompt: prompt
             })
         });
-
         const data = await res.json();
-
-        responseBox.textContent = data.response || data.error || "Unknown error.";
-
+        responseBox.textContent = data.response || data.error || "unknown error";
+        // if logical OR fails then check model csdofmvmeow
     } catch (err) {
-
-        responseBox.textContent = "Unable to reach the AI server.";
-
+        responseBox.textContent = "Failed please Email me";
     }
-
     button.disabled = false;
     button.textContent = "Send";
 }
