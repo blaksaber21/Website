@@ -1,5 +1,9 @@
 /* ==========================================================
-   root below all css access under
+ok i give up on color ID's that are in the text file use this root global color palette from stackoverflow
+--text main text
+--base main page background 
+--overlay0 and overlay1 borders
+
 ========================================================= */
 
 :root {
@@ -137,7 +141,7 @@ nav {
     background: rgba(255,255,255,0.03);
 }
 
-/* I think this matches what I wanted thanks stackoverflow */
+/* change me later */
 .nav-link {
   font-family: 'IBM Plex Sans', sans-serif;
   font-size: 0.9rem;
