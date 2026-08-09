@@ -1,9 +1,11 @@
 /* ==========================================================
-ok i give up on color ID's that are in the text file use this root global color palette from stackoverflow
+ok i give up on color ID's that are in the text file use this root global color palette from stackoverflow is 1000x better
 --text main text
 --base main page background 
 --overlay0 and overlay1 borders
-
+gotta stop mixing color systems
+color: var(--subtext0); is so much better
+I understand why catppuccins variable format is so common
 ========================================================= */
 
 :root {
