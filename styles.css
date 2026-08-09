@@ -40,7 +40,7 @@
 html {
   scroll-behavior: smooth;
 }
-
+/* should probably change font/lineH later */
 body {
   font-family: 'IBM Plex Sans', sans-serif;
   background: var(--base);
@@ -137,7 +137,7 @@ nav {
     background: rgba(255,255,255,0.03);
 }
 
-
+/* I think this matches what I wanted thanks stackoverflow */
 .nav-link {
   font-family: 'IBM Plex Sans', sans-serif;
   font-size: 0.9rem;
@@ -374,6 +374,7 @@ nav {
     border-radius: 4px;
     color: #aaa;
 }
+/* please change this owen you fucking idiot */
 .tag {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 0.75rem;
@@ -720,7 +721,7 @@ a.tag {
 .post-article .md-content a:hover {
   color: var(--rosewater);
 }
-
+/* I CANT REMEMBER CSS NAMES SEARCH FEATURES */
 .post-article .md-content code {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 0.85em;
