@@ -1723,3 +1723,162 @@ footer {
   justify-content: center;
   color: var(--overlay2);
 }
+ .tracker-card {
+            background: var(--mantle);
+            border: 1px solid var(--surface0);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .tracker-hd {
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid var(--surface0);
+        }
+
+        .tracker-eyebrow {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.72rem;
+            color: var(--overlay2);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 0.4rem;
+        }
+
+        .tracker-vtype {
+            font-family: 'Lora', serif;
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--text);
+        }
+
+        .t-sec {
+            padding: 1.25rem 2rem;
+            border-bottom: 1px solid var(--surface0);
+        }
+
+        .t-sec:last-child {
+            border-bottom: none;
+        }
+
+        .t-stitle {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--overlay1);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 0.9rem;
+        }
+
+        .t-row {
+            display: grid;
+            grid-template-columns: 128px 1fr;
+            gap: 0.25rem 0.75rem;
+            align-items: baseline;
+            margin-bottom: 0.5rem;
+        }
+
+        .t-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .t-lbl {
+            font-size: 0.78rem;
+            color: var(--overlay2);
+        }
+
+        .t-val {
+            font-size: 0.875rem;
+            color: var(--subtext1);
+            word-break: break-word;
+        }
+
+        .t-loc-grid {
+            display: grid;
+            grid-template-columns: 128px 1fr 1fr;
+            gap: 0.3rem 0.75rem;
+            align-items: baseline;
+        }
+
+        .t-loc-head {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.68rem;
+            color: var(--overlay2);
+            padding-bottom: 0.35rem;
+            border-bottom: 1px solid var(--surface1);
+        }
+
+        .t-loc-grid .t-lbl {
+            font-size: 0.78rem;
+        }
+
+        .t-loc-grid .t-val {
+            font-size: 0.85rem;
+        }
+
+        .t-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+        }
+
+        .t-tag {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.72rem;
+            padding: 0.2rem 0.55rem;
+            border-radius: 3px;
+            background: var(--surface0);
+            border: 1px solid var(--surface1);
+            color: var(--subtext0);
+        }
+
+        .t-tag.danger {
+            border-color: var(--overlay0);
+            color: var(--subtext1);
+        }
+
+        .flag {
+            height: 12px;
+            vertical-align: middle;
+            margin-right: 0.3em;
+            border-radius: 1px;
+        }
+
+        .fav {
+            width: 14px;
+            height: 14px;
+            vertical-align: middle;
+            margin-right: 0.35rem;
+            border-radius: 2px;
+        }
+
+        .t-val a {
+            color: var(--subtext1);
+            text-decoration: underline;
+            text-decoration-color: var(--overlay0);
+            text-underline-offset: 2px;
+            transition: color 0.15s;
+        }
+
+        .t-val a:hover {
+            color: var(--text);
+        }
+
+        .tracker-loading {
+            padding: 3rem 2rem;
+            text-align: center;
+            color: var(--overlay2);
+        }
+
+        .dns-divider {
+            border-top: 1px solid var(--surface0);
+            margin: 0.5rem 0;
+        }
+
+        @media (max-width: 480px) {
+            .t-sec {
+                padding: 1rem 1.25rem;
+            }
+            .tracker-hd {
+                padding: 1.25rem 1.25rem;
+            }
+        }
