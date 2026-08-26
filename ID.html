@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+       
+
+
+
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <a href="/" class="nav-brand">Test</a>
+        <ul class="nav-links">
+            <li><a href="/" class="nav-link">Home</a></li>
+            <li><a href="/about" class="nav-link">About</a></li>
+            <li><a href="/posts" class="nav-link">Blog</a></li>
+            <li><a href="/projects" class="nav-link active">Projects</a></li>
+            <li><a href="/contact" class="nav-link">Contact</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <main class="post-main">
+        <a href="/projects" class="back-link"> projects</a>
+
+        <div class="page-header">
+            <h1 class="page-title">Tracker</h1>
+            <p class="page-desc">An example of what a website can figure out about you without any extra input.<br> I do not save this data</p>
+       
+        </div>
+
+        <div class="tracker-card">
+            <div id="trackerLoading" class="tracker-loading">
+                <span class="mono">fetching data…</span>
+            </div>
+
+            <div id="trackerContent" style="display:none">
+
+                <div class="tracker-hd">
+                    <div class="tracker-eyebrow">What I Know About You</div>
+                    <div class="tracker-vtype" id="tVtype">—</div>
+                </div>
+
+                <div class="t-sec">
+                    <div class="t-stitle">Network</div>
+                    <div class="t-row"><span class="t-lbl">IP Address</span><span class="t-val mono" id="tIp">—</span></div>
+                    <div class="t-row" id="row-rdns" style="display:none"><span class="t-lbl">Hostname</span><span class="t-val mono" style="font-size:.78rem" id="tRdns"></span></div>
+                    <div class="t-row" id="row-org" style="display:none"><span class="t-lbl">Organization</span><span class="t-val" id="tOrg"></span></div>
+                    <div class="t-row" id="row-asn" style="display:none"><span class="t-lbl">ASN</span><span class="t-val mono" id="tAsn"></span></div>
+                    <div class="t-row" id="row-carrier" style="display:none"><span class="t-lbl">Carrier</span><span class="t-val" id="tCarrier"></span></div>
+                    <div class="t-row"><span class="t-lbl">IPv6 Support</span><span class="t-val" id="ipv6-support" style="color:var(--overlay2)">Checking…</span></div>
+                </div>
+
+                <div class="t-sec" id="sec-pop" style="display:none">
+                    <div class="t-stitle">Cloudflare Edge</div>
+                    <div class="t-row"><span class="t-lbl">Server</span><span class="t-val" id="tPop"></span></div>
+                </div>
+
+                <div class="t-sec">
+                    <div class="t-stitle">Estimated Location</div>
+                    <div class="t-loc-grid">
+                        <span></span>
+                        <span class="t-loc-head">IP Registry</span>
+                        <span class="t-loc-head">Cloudflare</span>
+                        <span class="t-lbl">City</span>
+                        <span class="t-val" id="loc-ip-city">—</span>
+                        <span class="t-val" id="loc-cf-city">—</span>
+                        <span class="t-lbl">Region</span>
+                        <span class="t-val" id="loc-ip-region">—</span>
+                        <span class="t-val" id="loc-cf-region">—</span>
+                        <span class="t-lbl">Country</span>
+                        <span class="t-val" id="loc-ip-country">—</span>
+                        <span class="t-val" id="loc-cf-country">—</span>
+                        <span class="t-lbl">Coordinates</span>
+                        <span class="t-val mono" style="font-size:.76rem" id="loc-ip-coords">—</span>
+                        <span class="t-val mono" style="font-size:.76rem" id="loc-cf-coords">—</span>
+                    </div>
+                </div>
+
+                <div class="t-sec">
+                    <div class="t-stitle">Browser</div>
+                    <div class="t-row"><span class="t-lbl">User Agent</span><span class="t-val mono" style="font-size:.76rem;line-height:1.55" id="tUa">—</span></div>
+                    <div class="t-row"><span class="t-lbl">Timezone</span><span class="t-val" id="tz">—</span></div>
+                    <div class="t-row"><span class="t-lbl">Screen</span><span class="t-val mono" style="font-size:.8rem" id="ss">—</span></div>
+                    <div class="t-row"><span class="t-lbl">Adblocker</span><span class="t-val" id="adb">—</span></div>
+                </div>
+
+                <div class="t-sec" id="sec-hw" style="display:none">
+                    <div class="t-stitle">Hardware</div>
+                    <div class="t-row" style="display:none"><span class="t-lbl">GPU</span><span class="t-val mono" style="font-size:.76rem" id="gpu"></span></div>
+                    <div class="t-row" style="display:none"><span class="t-lbl">GPU Vendor</span><span class="t-val" id="gpu-vendor"></span></div>
+                    <div class="t-row" style="display:none"><span class="t-lbl">CPU Cores</span><span class="t-val" id="cpu-cores"></span></div>
+                    <div class="t-row" style="display:none"><span class="t-lbl">CPU Arch</span><span class="t-val" id="cpu-arch"></span></div>
+                    <div class="t-row" style="display:none"><span class="t-lbl">Browser Mem</span><span class="t-val" id="mem"></span></div>
+                    <div class="t-row" style="display:none"><span class="t-lbl">Pointer</span><span class="t-val" id="pointer"></span></div>
+                    <div class="t-row" style="display:none"><span class="t-lbl">Battery</span><span class="t-val" id="battery"></span></div>
+                    <div class="t-row" style="display:none"><span class="t-lbl">Audio FP</span><span class="t-val mono" style="font-size:.76rem" id="audio-fp"></span></div>
+                </div>
+
+                <div class="t-sec" id="net-sec" style="display:none">
+                    <div class="t-stitle">Connection</div>
+                    <div class="t-row" style="display:none"><span class="t-lbl">Type</span><span class="t-val" id="net-type"></span></div>
+                    <div class="t-row" style="display:none"><span class="t-lbl">Downlink</span><span class="t-val" id="net-dl"></span></div>
+                    <div class="t-row" style="display:none"><span class="t-lbl">Ping</span><span class="t-val" id="net-rtt"></span></div>
+                </div>
+
+                <div class="t-sec" id="dns-sec" style="display:none">
+                    <div class="t-stitle">DNS Server</div>
+                    <div class="t-row" id="dns-status"><span class="t-lbl">Status</span><span class="t-val" style="color:var(--overlay2)">Detecting…</span></div>
+                    <div id="dns-list"></div>
+                </div>
+
+                <div class="t-sec" id="sec-tags" style="display:none">
+                    <div class="t-stitle">Tags</div>
+                    <div class="t-tags" id="tTags"></div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p class="footer-text">
+            <span class="mono">Owen</span>
+            <span class="footer-right mono"> © 2026 </span>
+        </p>
+    </footer>
+
+    <script src="/nav.js"></script>
+    <script src="/script.js"></script>
+    <script src="/auth.js"></script>
+    <script src="/projects/demos/tracker/tracker.js"></script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513209496" integrity="sha512-ZE9pZaUXNDx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"12c1b9864f264e11","r":1}' crossorigin="anonymous"></script>
+</body>
+</html>
