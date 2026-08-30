@@ -1,5 +1,5 @@
     (function () {
-        var API = 'https://api.tilley.lol';
+        var API = 'https://api.owenpinard.com';
 
         fetch(API + '/ip/info')
             .then(function (r) {
